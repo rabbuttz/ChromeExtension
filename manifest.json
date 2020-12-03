@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "gakumuExtension",
+    "short_name": "gakuEx",
+    "version": "0.0.1",
+    "description": "a extention for 学務情報システム",
+    "icons": {
+        "16": "download.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "download.png"
+        },
+        "default_title": "Ext title",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://gakujo.shizuoka.ac.jp/portal/home/home/initialize"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
